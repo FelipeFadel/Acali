@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #d3d3d3;
+  border-radius: 5px;
+}
+
+.centralizar {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.centro{
+  align-self: center;
+  justify-self: center;
+}
+
+.direita{
+  display: flex;
+  justify-self: end;
+}
+
+.esquerda {
+  display: flex;
+  justify-self: start;
+}
+
+.linhas {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboreto {
+  font-family: "Aboreto", sans-serif;
+  font-weight: 400;
+}
+
+header {
+  width: 90%;
+  justify-self: center;
+}
+
+.projetos {
+  width: 650px;
+  padding: 20px;
+  height: 600px;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
+h1{
+  font-size: 3em;
+  font-weight: 600;
+  color: #000000;
+}
+
+h2{
+  font-family: "Aboreto", sans-serif;
+  font-weight: 400;
+  font-size: 1.4em;
+  margin-top: 0.8em;
+}
+
+h3{
+  font-size: 0.8em;
+  color: #525252;
+}
+
+.margin{
+  margin-top: 1.5em;
+}
+
+p {
+  font-weight: 600;
+  font-size: 1em;
+  color: #8C8C8C;
+  text-align: justify;
+}
+
+.fechar {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  border: 1px solid #585858;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; 
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.fechar:hover {
+  background-color: #e8e8e8;
+}
+
+.risco {
+  position: absolute; 
+  width: 13px;        
+  height: 1px;
+  background-color: #585858;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+}
+
+.risco:first-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.risco:last-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.fechar:hover .risco {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.pesquisadores {
+  width: 90%;
+  justify-self: center;
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;              
+  margin-top: 20px;
+  scroll-snap-type: x mandatory; 
+}
+
+.pesquisadores::-webkit-scrollbar {
+  height: 5px;
+}
+
+.pesquisadores::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.pesquisadores::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.pesquisador-card {
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+.foto-pesquisador {
+  width: 70px;
+  height: 60px;
+  background-color: #d8d8d8;      
+  border-radius: 20%;             
+  object-fit: cover;
+}
+
+.pesquisador-nome{
+  font-size: 0.8em;
+  white-space: nowrap;
+  color: #000000;
+  margin: 0.5em 0 4px 0;
+}
+
+nav {
+  margin-top: 1em;
+  width: 90%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+aside {
+  background-color: teal;
+  margin: 0.5em;
+  display: block;
+}
+
+.arquivo {
+  width: 30%;
+  height: 150px;
+  padding: 10px;
+  background-color: #D9D9D9;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.arquivo img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.arquivo h3 {
+  margin-bottom: 0.5em;
+  color: #333;
+}
+
+.arquivo button {
+  padding: 8px 12px;
+  background-color: #D9D9D9;
+  color: #727272;
+  text-decoration: underline;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.arquivo button:hover {
+  background-color: #a2a2a2;
+}
+
+.projeto-info {
+  width: 50%;
+  height: auto;
+  padding: 10px;
+  background-color: #fff9c4;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info-item img.info-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.info-item span {
+  flex-grow: 1;
+  font-weight: 500;
+  color: #333;
+}
+
+.info-item strong {
+  font-weight: 700;
+  color: #000;
+}
