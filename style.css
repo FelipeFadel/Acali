@@ -81,11 +81,18 @@ h2{
   font-weight: 400;
   font-size: 1.4em;
   margin-top: 0.8em;
+  white-space: nowrap;
 }
 
 h3{
   font-size: 0.8em;
   color: #525252;
+}
+
+small {
+  font-size: 0.8em;
+  color: #8C8C8C;
+  font-weight: 600;
 }
 
 .margin{
@@ -184,7 +191,7 @@ p {
 }
 
 nav {
-  margin-top: 1em;
+  margin-top: 3.5em;
   width: 90%;
   height: 100px;
   display: flex;
@@ -193,18 +200,18 @@ nav {
 }
 
 aside {
-  background-color: teal;
   margin: 0.5em;
   display: block;
 }
 
 .arquivo {
-  width: 30%;
-  height: 150px;
+  width: 32%;
+  height: 155px;
   padding: 10px;
   background-color: #D9D9D9;
   border-radius: 10px;
   display: flex;
+  gap: 2px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -223,7 +230,6 @@ aside {
 }
 
 .arquivo button {
-  padding: 8px 12px;
   background-color: #D9D9D9;
   color: #727272;
   text-decoration: underline;
@@ -232,25 +238,25 @@ aside {
   cursor: pointer;
 }
 
-.arquivo button:hover {
-  background-color: #a2a2a2;
-}
-
 .projeto-info {
   width: 50%;
   height: auto;
   padding: 10px;
-  background-color: #fff9c4;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
+.projeto-info h2 {
+  align-self: center;
+}
+
+
 .info-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: space-between;
 }
 
 .info-item img.info-icon {
@@ -260,12 +266,32 @@ aside {
 }
 
 .info-item span {
-  flex-grow: 1;
-  font-weight: 500;
-  color: #333;
+  font-size: 0.8em;
+  color: #8C8C8C;
+  font-weight: 600;
 }
 
-.info-item strong {
-  font-weight: 700;
-  color: #000;
+.download-link {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.download-link img{
+  width: 16px; 
+  height: 16px;
+  margin-bottom: -3px;
+  align-self: center;
+}
+
+a:hover {
+  background-color: #b2b2b2;
+}
+
+.download-link:hover button {
+  background-color: #b2b2b2;
 }
