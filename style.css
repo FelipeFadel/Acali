@@ -8,7 +8,7 @@ body {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 body::-webkit-scrollbar {
@@ -32,12 +32,12 @@ body::-webkit-scrollbar-thumb {
   min-height: 100vh;
 }
 
-.centro{
+.centro {
   align-self: center;
   justify-self: center;
 }
 
-.direita{
+.direita {
   display: flex;
   justify-self: end;
 }
@@ -65,18 +65,18 @@ header {
 .projetos {
   width: 650px;
   padding: 20px;
-  height: 600px;
+  height: 670px;
   border-radius: 20px;
   background-color: #ffffff;
 }
 
-h1{
+h1 {
   font-size: 3em;
   font-weight: 600;
   color: #000000;
 }
 
-h2{
+h2 {
   font-family: "Aboreto", sans-serif;
   font-weight: 400;
   font-size: 1.4em;
@@ -84,25 +84,25 @@ h2{
   white-space: nowrap;
 }
 
-h3{
+h3 {
   font-size: 0.8em;
   color: #525252;
 }
 
 small {
-  font-size: 0.8em;
-  color: #8C8C8C;
+  font-size: 0.7em;
+  color: #8c8c8c;
   font-weight: 600;
 }
 
-.margin{
+.margin {
   margin-top: 1.5em;
 }
 
 p {
-  font-weight: 600;
-  font-size: 1em;
-  color: #8C8C8C;
+  font-weight: 500;
+  font-size: 0.9em;
+  color: #8c8c8c;
   text-align: justify;
 }
 
@@ -114,7 +114,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative; 
+  position: relative;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
@@ -124,8 +124,8 @@ p {
 }
 
 .risco {
-  position: absolute; 
-  width: 13px;        
+  position: absolute;
+  width: 13px;
   height: 1px;
   background-color: #585858;
   top: 50%;
@@ -152,9 +152,9 @@ p {
   justify-self: center;
   display: flex;
   gap: 12px;
-  overflow-x: auto;              
+  overflow-x: auto;
   margin-top: 20px;
-  scroll-snap-type: x mandatory; 
+  scroll-snap-type: x mandatory;
 }
 
 .pesquisadores::-webkit-scrollbar {
@@ -178,20 +178,20 @@ p {
 .foto-pesquisador {
   width: 70px;
   height: 60px;
-  background-color: #d8d8d8;      
-  border-radius: 20%;             
+  background-color: #d8d8d8;
+  border-radius: 25%;
   object-fit: cover;
 }
 
-.pesquisador-nome{
-  font-size: 0.8em;
+.pesquisador-nome {
+  font-size: 0.75em;
   white-space: nowrap;
   color: #000000;
   margin: 0.5em 0 4px 0;
 }
 
 nav {
-  margin-top: 3.5em;
+  margin-top: 5em;
   width: 90%;
   height: 100px;
   display: flex;
@@ -200,16 +200,18 @@ nav {
 }
 
 aside {
-  margin: 0.5em;
+  margin: 0.6em;
   display: block;
 }
 
 .arquivo {
-  width: 32%;
+  width: 31%;
   height: 155px;
   padding: 10px;
-  background-color: #D9D9D9;
-  border-radius: 10px;
+  margin-left: 20px;
+  margin-top: 40px;
+  background-color: #d9d9d9;
+  border-radius: 16px;
   display: flex;
   gap: 2px;
   flex-direction: column;
@@ -226,16 +228,21 @@ aside {
 
 .arquivo h3 {
   margin-bottom: 0.5em;
-  color: #333;
+  font-size: 0.8em;
+  color: #525252;
 }
 
 .arquivo button {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   color: #727272;
+  font-size: 0.8em;
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  margin-bottom: 2px;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
+  font-size: 0.8em;
 }
 
 .projeto-info {
@@ -250,13 +257,18 @@ aside {
 
 .projeto-info h2 {
   align-self: center;
+  margin-bottom: 16px;
 }
-
 
 .info-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.info-container {
+  display: flex;
+  align-items: center;
 }
 
 .info-item img.info-icon {
@@ -266,14 +278,15 @@ aside {
 }
 
 .info-item span {
-  font-size: 0.8em;
-  color: #8C8C8C;
+  font-size: 0.7em;
+  color: #8c8c8c;
   font-weight: 600;
+  margin-left: 8px;
 }
 
 .download-link {
   display: flex;
-  align-items: center; 
+  align-items: center;
   justify-content: center;
   gap: 5px;
   padding: 5px 10px;
@@ -281,8 +294,8 @@ aside {
   text-decoration: none;
 }
 
-.download-link img{
-  width: 16px; 
+.download-link img {
+  width: 16px;
   height: 16px;
   margin-bottom: -3px;
   align-self: center;
@@ -294,4 +307,22 @@ a:hover {
 
 .download-link:hover button {
   background-color: #b2b2b2;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  position: relative;
+}
+
+.bolinhas {
+  position: absolute;
+  right: -5px;
+  bottom: -40px;
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  width: 80px;
+  height: 80px;
 }
